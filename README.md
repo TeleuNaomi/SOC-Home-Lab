@@ -69,7 +69,7 @@ To enable communication between all virtual machines, they must be connected to 
    - Ensure to connect Every VM to this network.
 
 3. Configuring Splunk Server on Windows
-   - On both Windows Machines, visit Splunk website and download Splunk universal forwarder.
+   - On both Windows Machines, visit Splunk website (must create an account) and download Splunk universal forwarder.
    - Install the universal forwarder and add the Splunk IP on the receiving event.
    - On the machine, access folder where the forwarder is installed, go to > etc >system > local. You will find  
    - Modify the "input.conf" so that all events are pushed to the Splunk machine using a specific index (eg. endpoint).
