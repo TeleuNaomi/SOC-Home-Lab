@@ -67,6 +67,7 @@ To enable communication between all virtual machines, they must be connected to 
    - Go to settings > Network.
    - Create a NAT. (eg mine is HOME-LAB-PROJECT).
    - Ensure to connect Every VM to this network.
+![SOC lab](./Image/network.PNG) 
 
 3. Configuring Splunk Server on Windows
    - On both Windows Machines, visit Splunk website (must create an account) and download Splunk universal forwarder.
