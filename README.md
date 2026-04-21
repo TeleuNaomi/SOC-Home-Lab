@@ -55,6 +55,11 @@ First and foremost, Download any Virtual Machine (Oracle virtualbox, VMware work
 6. Download the DVD version and install OPNsense.
    - Create a new VM and install OPNsense.
   
+All Set !
+  
+![SOC lab](./Image/labs.PNG) 
+  
+
 ## PART B: CONFIGURATION
 1. Configuring the Network.
 
