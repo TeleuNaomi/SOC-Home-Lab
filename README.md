@@ -50,7 +50,7 @@ First and foremost, Download any Virtual Machine (Oracle virtualbox, VMware work
 5. Download Wazuh VM.
    - Mount the image on your VM and install.
    - Always do ```sudo -i``` to enter root mode.
-   - Then ```sudo a```. Take note of Wazuh's IP.
+   - Then ```sudo ip a```. Take note of Wazuh's IP.
 
 6. Download the DVD version and install OPNsense.
    - Create a new VM and install OPNsense.
@@ -86,7 +86,7 @@ To enable communication between all virtual machines, they must be connected to 
    - Open Powershell with administrative rights and install Sysmon64.exe.
 
 5. Configuring Wazuh on both Windows machines
-   - Open wazuh IP on both windows
+   - Open wazuh IP on both windows, it will direct you to an unsafe link, Which is normal
    - Click add agent and follow the instruction to add win10 and win server
 
 6. Configuring OPNsense firewall
