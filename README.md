@@ -74,37 +74,43 @@ To enable communication between all virtual machines, they must be connected to 
 ![SOC lab](./Image/network.PNG) 
 
 3. Configuring Splunk Server on Windows
-   - On both Windows Machines, visit Splunk website (must create an account) and download Splunk universal forwarder.
+   - On both Windows Machines, visit the Splunk website (must create an account) and download Splunk universal forwarder.
    - Install the universal forwarder and add the Splunk IP on the receiving event.
-   - On the machine, access folder where the forwarder is installed, go to > etc >system > local. You will find  
-   - Modify the "input.conf" so that all events are pushed to the Splunk machine using a specific index (eg. endpoint).
+   ![SOC lab](./Image/Splunk.PNG)
+   - On both the Windows server and the target machine, access the folder where the forwarder is installed (usually Program Files), go to > etc >system > local. 
+   - Create "input.conf" and configure as below, so that all events are pushed to the Splunk machine using a specific index (eg, endpoint).
+![SOC lab](./Image/sysmon_fowarder_splunk.PNG)
    - Restart Splunk forwarder service.
-   - Google, add Splunk server IP, log in, > settings > create index called "endpoint" and enable it by adding the receiving port of 9997.
-   - Machines are now connected to splunk.
+   ![SOC lab](./Image/splunk_services.PNG)
+   - On Google, add your Splunk server IP, log in, > settings > create index called "endpoint" and enable it by adding the receiving port of 9997.
+   - Machines are now connected to Splunk.
+  
+   
 
-4. Configuring Sysmon on Windows Server and Target machine.
-   - Sysmon on Microsoft
+4. Configuring Sysmon on Windows Server and the target machine.
+   - Download Sysmon on the Microsoft website
    - Use Olaf Hartong's config on GitHub.
    - Download Sysmonconfig.xml
    - Extract all
    - Open Powershell with administrative rights and install Sysmon64.exe.
 
-     ![SOC lab](./Image/Sysmon config.PNG) 
+     ![SOC lab](./Image/Sysmon_config.PNG) 
 
 5. Configuring Wazuh on both Windows machines
-   - Open wazuh IP on both windows, it will direct you to an unsafe link, Which is normal
-   - Click add agent and follow the instruction to add win10 and win server
+   - Open Wazuh IP on both Windows; it will direct you to an unsafe link, which is normal
+   - Click "Add agent" and follow the instructions to add Windows 10 and Windows Server.
 
 6. Configuring OPNsense firewall
    - Run firewall on VM
--	After installing (user:root /password:opnsense)
+-	After installing (user: root /password:opnsense)
 -	Change default password
--	Open browser on windows type the LAN IP of your VM to access OPNsense
+-	Open a browser on Windows, type the LAN IP of your VM to access OPNsense
 
 
 
 ## Upcoming Projects in This Home Lab:
 -	Active Directory
+-	Atomic RedTeam
 -	Phishing/Ransmoware/bruteforce attacks
 -	Wireshark
 -	Incidence Response playbook
