@@ -12,6 +12,10 @@ Cybersecurity home lab with 6 VMs featuring Sysmon-based logging, Splunk SIEM in
 
 The objective of this lab is to simulate a realistic cybersecurity environment where attacks are performed and monitored using industry-standard SOC tools. This setup will improve practical skills in threat detection, log investigation, and incident response.
 
+## GRAPHICAL REPRESENTATION OF THE SOC-LAB
+
+![SOC lab network architecture showing all VMs and their connections](./Image/PNG1.png) 
+
 ## Minimum Requirements
 - **RAM**: 16GB RAM — run 4-5 VMs at a time Recommended
 - **Virtualization Software**: VMware or VirtualBox
@@ -30,22 +34,22 @@ The objective of this lab is to simulate a realistic cybersecurity environment w
 Total of 190GB
 
 ## PART A: INSTALLING VIRTUAL MACHINES
-First and foremost, Download any Virtual Machine (Oracle virtualbox, VMware workstation, Microsoft Hyper-V etc).
+First, download any Virtual Machine (Oracle VirtualBox, VMware Workstation, Microsoft Hyper-V, etc.).
 
 1. Download Win10 /11.
-   - Mount image on VM and install Windows 10.
+   - Mount the image on the VM and install Windows 10.
 
 2. Download and install Kali for virtual machines.
-   - Mount image on VM and install Kali.
+   - Mount the image on the VM and install Kali.
 
-3. Download the ISO file of Windows Server 2022. (You will have to create an account. The server is free for a total number of 180 days)
-   - Mount image on VM and install WinServer.
+3. Download the ISO file of Windows Server 2022. (You will have to create an account. The server is free for 180 days)
+   - Mount the image on the VM and install WinServer.
 
 4. Download Ubuntu Server (For Splunk)
-   - Mount image on VM, Choose preferred language and install.
+   - Mount the image on the VM, choose a preferred language, and install.
    - Take note of Splunk's IP.
-   - Install virtual box guest addition.
-   - Reboot machine.
+   - Install VirtualBox guest additions.
+   - Reboot the machine.
 
 5. Download Wazuh VM.
    - Mount the image on your VM and install.
@@ -85,6 +89,8 @@ To enable communication between all virtual machines, they must be connected to 
    - Extract all
    - Open Powershell with administrative rights and install Sysmon64.exe.
 
+     ![SOC lab](./Image/Sysmon config.PNG) 
+
 5. Configuring Wazuh on both Windows machines
    - Open wazuh IP on both windows, it will direct you to an unsafe link, Which is normal
    - Click add agent and follow the instruction to add win10 and win server
@@ -96,9 +102,6 @@ To enable communication between all virtual machines, they must be connected to 
 -	Open browser on windows type the LAN IP of your VM to access OPNsense
 
 
-## GRAPHICAL REPRESANTATION OF THE SOC-LAB
-
-![SOC lab network architecture showing all VMs and their connections](./Image/PNG1.png) 
 
 ## Upcoming Projects in This Home Lab:
 -	Active Directory
